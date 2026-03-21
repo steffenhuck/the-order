@@ -1,0 +1,165 @@
+:root {
+  --bg: #f7b26a;
+  --speaker: #2c58ff;
+  --text: #f8f9fb;
+  --stage: rgba(248, 249, 251, 0.78);
+  --footer-line: rgba(248, 249, 251, 0.65);
+  --footer-text: rgba(248, 249, 251, 0.88);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.page {
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 56px 28px 44px;
+}
+
+.play {
+  max-width: 620px;
+}
+
+.play-header {
+  margin-bottom: 2.6rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.3rem;
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--speaker);
+}
+
+.subtitle {
+  margin: 0.65rem 0 0 0;
+  font-size: 1rem;
+  line-height: 1.4;
+  font-weight: 400;
+  color: var(--text);
+}
+
+.cast-section {
+  margin-bottom: 2.2rem;
+}
+
+.cast-section h2 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1rem;
+  line-height: 1.3;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--speaker);
+}
+
+.cast-section p {
+  margin: 0.18rem 0;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+.stage-direction {
+  margin: 1.7rem 0 1.45rem 0;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  font-style: italic;
+  color: var(--stage);
+}
+
+.speech {
+  margin: 0 0 1.3rem 0;
+}
+
+.speaker {
+  margin: 0 0 0.16rem 0;
+  font-size: 1rem;
+  line-height: 1.35;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--speaker);
+}
+
+.line {
+  margin: 0;
+  font-size: 1.04rem;
+  line-height: 1.62;
+  font-weight: 400;
+  color: var(--text);
+}
+
+.site-footer {
+  max-width: 620px;
+  margin-top: 3.2rem;
+}
+
+.footer-divider {
+  width: 100%;
+  height: 1px;
+  background: var(--footer-line);
+  margin-bottom: 1rem;
+}
+
+.signature {
+  margin: 0;
+  font-size: 0.72rem;
+  line-height: 1;
+  letter-spacing: 0.24em;
+  text-transform: lowercase;
+  color: var(--footer-text);
+}
+
+.signature a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.signature a:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 700px) {
+  .page {
+    padding: 38px 20px 32px;
+  }
+
+  .play,
+  .site-footer {
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+  }
+
+  .line,
+  .cast-section p,
+  .speaker,
+  .stage-direction,
+  .subtitle {
+    font-size: 0.98rem;
+  }
+
+  .signature {
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+  }
+}

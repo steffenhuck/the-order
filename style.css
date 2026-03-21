@@ -1,12 +1,14 @@
 :root {
-  --bg-top: #24101c;
-  --bg-bottom: #341326;
-  --text: #f3eff4;
-  --stage: rgba(243, 239, 244, 0.74);
-  --speaker: #cf6a9a;
-  --speaker-soft: #d985ac;
-  --divider: rgba(243, 239, 244, 0.38);
-  --signature: rgba(243, 239, 244, 0.82);
+  --bg-top: #21101b;
+  --bg-bottom: #341427;
+  --text: #f3edf3;
+  --stage: rgba(243, 237, 243, 0.76);
+  --title-pink: #f061b0;
+  --subtitle-pink: #d995ba;
+  --speaker-pink: #e56aac;
+  --speaker-soft: #dc89b3;
+  --divider: rgba(243, 237, 243, 0.34);
+  --signature: rgba(243, 237, 243, 0.82);
 }
 
 * {
@@ -29,62 +31,75 @@ body {
 
 .page {
   width: 100%;
-  max-width: 980px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 68px 34px 46px;
 }
 
 .play {
-  max-width: 760px;
+  width: 100%;
 }
 
 .play-header {
-  margin-bottom: 3rem;
+  max-width: 760px;
+  margin: 0 auto 1.3rem;
+  text-align: center;
 }
 
 h1 {
   margin: 0;
-  font-size: 3.05rem;
-  line-height: 0.98;
+  font-size: 4rem;
+  line-height: 0.95;
   font-weight: 700;
-  letter-spacing: 0.11em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--speaker);
-  text-shadow: 0 0 1px rgba(0, 0, 0, 0.18);
+  color: var(--title-pink);
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
 }
 
 .subtitle {
-  margin: 0.7rem 0 0 0;
-  font-size: 1.03rem;
-  line-height: 1.4;
-  color: var(--text);
+  margin: 1rem 0 0 0;
+  font-size: 1.28rem;
+  line-height: 1.35;
+  color: var(--subtitle-pink);
 }
 
-.cast-section {
-  margin-bottom: 2.4rem;
+.cast-line {
+  margin: 1.4rem 0 0 0;
+  font-size: 1.08rem;
+  line-height: 1.5;
+  color: var(--subtitle-pink);
+  letter-spacing: 0.02em;
 }
 
-.cast-section h2 {
-  margin: 0 0 0.85rem 0;
-  font-size: 1rem;
-  line-height: 1.3;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  color: var(--speaker);
+.bullet {
+  padding: 0 0.45rem;
+  color: var(--speaker-pink);
 }
 
-.cast-section p {
-  margin: 0.16rem 0;
-  font-size: 1rem;
-  line-height: 1.58;
-  color: var(--text);
+.hero-image {
+  max-width: 760px;
+  margin: 1.4rem auto 2.3rem;
+  text-align: center;
+}
+
+.hero-image img {
+  display: inline-block;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+}
+
+.body-column {
+  max-width: 760px;
+  margin: 0 auto;
 }
 
 .stage-direction {
-  margin: 1.9rem 0 1.55rem 2.25rem;
+  margin: 1.95rem 0 1.55rem 4.2rem;
   max-width: 42rem;
-  font-size: 0.98rem;
-  line-height: 1.68;
+  font-size: 0.99rem;
+  line-height: 1.7;
   font-style: italic;
   color: var(--stage);
 }
@@ -99,12 +114,12 @@ h1 {
   line-height: 1.32;
   font-weight: 600;
   letter-spacing: 0.03em;
-  color: var(--speaker);
+  color: var(--speaker-pink);
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.12);
 }
 
 .line {
-  margin: 0 0 0 2.25rem;
+  margin: 0 0 0 4.2rem;
   max-width: 40rem;
   font-size: 1.07rem;
   line-height: 1.66;
@@ -113,7 +128,7 @@ h1 {
 
 .speech.voices .line,
 .speech.crowd .line {
-  margin-left: 3.3rem;
+  margin-left: 5.3rem;
 }
 
 .speech.voices .speaker,
@@ -123,7 +138,7 @@ h1 {
 
 .site-footer {
   max-width: 760px;
-  margin-top: 3.6rem;
+  margin: 3.7rem auto 0;
 }
 
 .footer-divider {
@@ -140,6 +155,7 @@ h1 {
   letter-spacing: 0.24em;
   text-transform: lowercase;
   color: var(--signature);
+  text-align: center;
 }
 
 .signature a {
@@ -151,65 +167,85 @@ h1 {
   opacity: 0.85;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .page {
-    padding: 46px 22px 34px;
-  }
-
-  .play,
-  .site-footer {
-    max-width: 100%;
+    padding: 48px 22px 34px;
   }
 
   h1 {
-    font-size: 2.3rem;
-    letter-spacing: 0.09em;
+    font-size: 3.05rem;
+    letter-spacing: 0.1em;
   }
 
-  .subtitle,
-  .cast-section p,
-  .cast-section h2,
-  .speaker,
-  .stage-direction,
-  .line {
-    font-size: 0.98rem;
+  .subtitle {
+    font-size: 1.14rem;
+  }
+
+  .cast-line {
+    font-size: 1rem;
+  }
+
+  .hero-image img {
+    max-width: 360px;
   }
 
   .stage-direction {
-    margin-left: 1.4rem;
+    margin-left: 2.3rem;
   }
 
   .line {
-    margin-left: 1.4rem;
+    margin-left: 2.3rem;
   }
 
   .speech.voices .line,
   .speech.crowd .line {
-    margin-left: 2.1rem;
-  }
-
-  .signature {
-    font-size: 0.68rem;
-    letter-spacing: 0.2em;
+    margin-left: 3.2rem;
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 600px) {
   .page {
     padding: 34px 16px 28px;
   }
 
   h1 {
-    font-size: 1.95rem;
+    font-size: 2.35rem;
+  }
+
+  .subtitle {
+    font-size: 1.02rem;
+  }
+
+  .cast-line {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .bullet {
+    padding: 0 0.25rem;
+  }
+
+  .hero-image {
+    margin-top: 1.2rem;
+    margin-bottom: 1.9rem;
+  }
+
+  .hero-image img {
+    max-width: 290px;
   }
 
   .stage-direction,
   .line {
-    margin-left: 0.9rem;
+    margin-left: 1rem;
   }
 
   .speech.voices .line,
   .speech.crowd .line {
-    margin-left: 1.4rem;
+    margin-left: 1.6rem;
+  }
+
+  .signature {
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
   }
 }

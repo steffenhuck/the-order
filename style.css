@@ -1,14 +1,16 @@
 :root {
   --bg-top: #21101b;
   --bg-bottom: #341427;
-  --text: #f3edf3;
-  --stage: rgba(243, 237, 243, 0.76);
+
   --title-pink: #f061b0;
-  --subtitle-pink: #d995ba;
+  --subtitle-pink: #d7a0bf;
   --speaker-pink: #e56aac;
-  --speaker-soft: #dc89b3;
-  --divider: rgba(243, 237, 243, 0.34);
-  --signature: rgba(243, 237, 243, 0.82);
+
+  --text: #ecd6e2;
+  --stage: #cfaebf;
+
+  --divider: rgba(236, 214, 226, 0.32);
+  --signature: rgba(236, 214, 226, 0.82);
 }
 
 * {
@@ -40,6 +42,8 @@ body {
   width: 100%;
 }
 
+/* --- Header --- */
+
 .play-header {
   max-width: 760px;
   margin: 0 auto 1.3rem;
@@ -57,15 +61,22 @@ h1 {
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
 }
 
+/* UPDATED SUBTITLE */
+
 .subtitle {
-  margin: 1rem 0 0 0;
-  font-size: 1.28rem;
-  line-height: 1.35;
+  margin: 1.4rem 0 0 0;
+  font-size: 1.45rem;
+  line-height: 1.45;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.035em;
   color: var(--subtitle-pink);
 }
 
+/* Increased spacing below subtitle */
+
 .cast-line {
-  margin: 1.4rem 0 0 0;
+  margin: 2rem 0 0 0;
   font-size: 1.08rem;
   line-height: 1.5;
   color: var(--subtitle-pink);
@@ -77,9 +88,11 @@ h1 {
   color: var(--speaker-pink);
 }
 
+/* --- Hero image --- */
+
 .hero-image {
   max-width: 760px;
-  margin: 1.4rem auto 2.3rem;
+  margin: 1.6rem auto 2.6rem;
   text-align: center;
 }
 
@@ -90,10 +103,14 @@ h1 {
   height: auto;
 }
 
+/* --- Body column --- */
+
 .body-column {
   max-width: 760px;
   margin: 0 auto;
 }
+
+/* Stage directions */
 
 .stage-direction {
   margin: 1.95rem 0 1.55rem 4.2rem;
@@ -103,6 +120,8 @@ h1 {
   font-style: italic;
   color: var(--stage);
 }
+
+/* Dialogue */
 
 .speech {
   margin: 0 0 1.45rem 0;
@@ -126,15 +145,7 @@ h1 {
   color: var(--text);
 }
 
-.speech.voices .line,
-.speech.crowd .line {
-  margin-left: 5.3rem;
-}
-
-.speech.voices .speaker,
-.speech.crowd .speaker {
-  color: var(--speaker-soft);
-}
+/* --- Footer --- */
 
 .site-footer {
   max-width: 760px;
@@ -167,6 +178,8 @@ h1 {
   opacity: 0.85;
 }
 
+/* --- Responsive --- */
+
 @media (max-width: 900px) {
   .page {
     padding: 48px 22px 34px;
@@ -178,7 +191,7 @@ h1 {
   }
 
   .subtitle {
-    font-size: 1.14rem;
+    font-size: 1.25rem;
   }
 
   .cast-line {
@@ -189,17 +202,9 @@ h1 {
     max-width: 360px;
   }
 
-  .stage-direction {
-    margin-left: 2.3rem;
-  }
-
+  .stage-direction,
   .line {
     margin-left: 2.3rem;
-  }
-
-  .speech.voices .line,
-  .speech.crowd .line {
-    margin-left: 3.2rem;
   }
 }
 
@@ -213,7 +218,7 @@ h1 {
   }
 
   .subtitle {
-    font-size: 1.02rem;
+    font-size: 1.1rem;
   }
 
   .cast-line {
@@ -237,11 +242,6 @@ h1 {
   .stage-direction,
   .line {
     margin-left: 1rem;
-  }
-
-  .speech.voices .line,
-  .speech.crowd .line {
-    margin-left: 1.6rem;
   }
 
   .signature {

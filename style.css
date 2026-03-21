@@ -1,10 +1,12 @@
 :root {
-  --bg: #f7b26a;
-  --speaker: #2c58ff;
-  --text: #f8f9fb;
-  --stage: rgba(248, 249, 251, 0.78);
-  --footer-line: rgba(248, 249, 251, 0.65);
-  --footer-text: rgba(248, 249, 251, 0.88);
+  --bg-top: #24101c;
+  --bg-bottom: #341326;
+  --text: #f3eff4;
+  --stage: rgba(243, 239, 244, 0.74);
+  --speaker: #cf6a9a;
+  --speaker-soft: #d985ac;
+  --divider: rgba(243, 239, 244, 0.38);
+  --signature: rgba(243, 239, 244, 0.82);
 }
 
 * {
@@ -17,7 +19,8 @@ html {
 
 body {
   margin: 0;
-  background: var(--bg);
+  min-height: 100vh;
+  background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
   color: var(--text);
   font-family: Inter, Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -26,95 +29,107 @@ body {
 
 .page {
   width: 100%;
-  max-width: 860px;
+  max-width: 980px;
   margin: 0 auto;
-  padding: 56px 28px 44px;
+  padding: 68px 34px 46px;
 }
 
 .play {
-  max-width: 620px;
+  max-width: 760px;
 }
 
 .play-header {
-  margin-bottom: 2.6rem;
+  margin-bottom: 3rem;
 }
 
 h1 {
   margin: 0;
-  font-size: 2.3rem;
-  line-height: 1.05;
+  font-size: 3.05rem;
+  line-height: 0.98;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.11em;
   text-transform: uppercase;
   color: var(--speaker);
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.18);
 }
 
 .subtitle {
-  margin: 0.65rem 0 0 0;
-  font-size: 1rem;
+  margin: 0.7rem 0 0 0;
+  font-size: 1.03rem;
   line-height: 1.4;
-  font-weight: 400;
   color: var(--text);
 }
 
 .cast-section {
-  margin-bottom: 2.2rem;
+  margin-bottom: 2.4rem;
 }
 
 .cast-section h2 {
-  margin: 0 0 0.75rem 0;
+  margin: 0 0 0.85rem 0;
   font-size: 1rem;
   line-height: 1.3;
   font-weight: 600;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
   color: var(--speaker);
 }
 
 .cast-section p {
-  margin: 0.18rem 0;
+  margin: 0.16rem 0;
   font-size: 1rem;
-  line-height: 1.55;
+  line-height: 1.58;
   color: var(--text);
 }
 
 .stage-direction {
-  margin: 1.7rem 0 1.45rem 0;
+  margin: 1.9rem 0 1.55rem 2.25rem;
+  max-width: 42rem;
   font-size: 0.98rem;
-  line-height: 1.6;
+  line-height: 1.68;
   font-style: italic;
   color: var(--stage);
 }
 
 .speech {
-  margin: 0 0 1.3rem 0;
+  margin: 0 0 1.45rem 0;
 }
 
 .speaker {
-  margin: 0 0 0.16rem 0;
+  margin: 0 0 0.18rem 0;
   font-size: 1rem;
-  line-height: 1.35;
+  line-height: 1.32;
   font-weight: 600;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
   color: var(--speaker);
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.12);
 }
 
 .line {
-  margin: 0;
-  font-size: 1.04rem;
-  line-height: 1.62;
-  font-weight: 400;
+  margin: 0 0 0 2.25rem;
+  max-width: 40rem;
+  font-size: 1.07rem;
+  line-height: 1.66;
   color: var(--text);
 }
 
+.speech.voices .line,
+.speech.crowd .line {
+  margin-left: 3.3rem;
+}
+
+.speech.voices .speaker,
+.speech.crowd .speaker {
+  color: var(--speaker-soft);
+}
+
 .site-footer {
-  max-width: 620px;
-  margin-top: 3.2rem;
+  max-width: 760px;
+  margin-top: 3.6rem;
 }
 
 .footer-divider {
   width: 100%;
   height: 1px;
-  background: var(--footer-line);
+  background: var(--divider);
   margin-bottom: 1rem;
 }
 
@@ -124,7 +139,7 @@ h1 {
   line-height: 1;
   letter-spacing: 0.24em;
   text-transform: lowercase;
-  color: var(--footer-text);
+  color: var(--signature);
 }
 
 .signature a {
@@ -136,9 +151,9 @@ h1 {
   opacity: 0.85;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .page {
-    padding: 38px 20px 32px;
+    padding: 46px 22px 34px;
   }
 
   .play,
@@ -147,19 +162,54 @@ h1 {
   }
 
   h1 {
-    font-size: 1.9rem;
+    font-size: 2.3rem;
+    letter-spacing: 0.09em;
   }
 
-  .line,
+  .subtitle,
   .cast-section p,
+  .cast-section h2,
   .speaker,
   .stage-direction,
-  .subtitle {
+  .line {
     font-size: 0.98rem;
+  }
+
+  .stage-direction {
+    margin-left: 1.4rem;
+  }
+
+  .line {
+    margin-left: 1.4rem;
+  }
+
+  .speech.voices .line,
+  .speech.crowd .line {
+    margin-left: 2.1rem;
   }
 
   .signature {
     font-size: 0.68rem;
     letter-spacing: 0.2em;
+  }
+}
+
+@media (max-width: 520px) {
+  .page {
+    padding: 34px 16px 28px;
+  }
+
+  h1 {
+    font-size: 1.95rem;
+  }
+
+  .stage-direction,
+  .line {
+    margin-left: 0.9rem;
+  }
+
+  .speech.voices .line,
+  .speech.crowd .line {
+    margin-left: 1.4rem;
   }
 }
